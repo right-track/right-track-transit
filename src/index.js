@@ -57,6 +57,36 @@ class RightTrackTransitAgency {
   loadFeed(callback) {
     return callback(new Error("4052|Transit Feed Not Supported|This transit agency (" + this.name + ") does not support real-time Transit Feeds"));
   }
+
+  /**
+   * Get the local file path to the icon for the specified Transit Division
+   * @param {string} division Transit Division Code
+   * @returns {string|undefined} Absolute local path to division icon
+   * @abstract
+   */
+  getDivisionIconPath(division) {
+    return undefined;
+  }
+
+  /**
+   * Get the background color for the specified Transit Line
+   * @param {string} line Transit Line Code
+   * @returns {string} background color (#rrggbb)
+   * @abstract
+   */
+  getLineBackgroundColor(line) {
+    return "#3d3d3d";
+  }
+
+  /**
+   * Get the text color for the specified Transit Line
+   * @param line
+   * @returns {string} text color (#rrggbb)
+   * @abstract
+   */
+  getLineTextColor(line) {
+    return "#e7e7e7";
+  }
   
 }
 
