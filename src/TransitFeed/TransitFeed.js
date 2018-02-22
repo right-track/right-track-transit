@@ -17,14 +17,15 @@ class TransitFeed {
 
   /**
    * Create a new Transit Feed
+   * @param {Date} [updated] The Date/Time when the feed was last updated
    */
-  constructor() {
+  constructor(updated) {
 
     /**
      * The Date/Time when the feed was last updated
      * @type {Date}
      */
-    this.updated = new Date();
+    this.updated = updated !== undefined ? updated : new Date();
 
     /**
      * List of Transit Divisions for this Feed
@@ -32,14 +33,6 @@ class TransitFeed {
      */
     this.divisions = [];
 
-  }
-
-  /**
-   * Add a Transit Division to this Feed
-   * @param {TransitDivision} division Transit Division to add
-   */
-  addDivision(division) {
-    this.divisions.push(division);
   }
 
   /**
@@ -55,3 +48,6 @@ class TransitFeed {
   }
 
 }
+
+
+module.exports = TransitFeed;

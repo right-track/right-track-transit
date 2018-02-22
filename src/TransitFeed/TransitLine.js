@@ -63,14 +63,6 @@ class TransitLine {
   }
 
   /**
-   * Add a Transit Event for this Line
-   * @param {TransitEvent} event Transit Event to add
-   */
-  addEvent(event) {
-    this.events.push(event);
-  }
-
-  /**
    * Get the number of Transit Events for this Line
    * @returns {number}
    */
@@ -79,3 +71,6 @@ class TransitLine {
   }
 
 }
+
+
+module.exports = TransitLine;

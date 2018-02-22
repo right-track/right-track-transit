@@ -16,9 +16,9 @@ class TransitDivision {
    * Create a new Transit Division
    * @param {string} code Division Code
    * @param {string} name Division Name
-   * @param {string} [iconUrl] Division Icon URL
+   * @param {string} [iconPath] Local file path to Division icon
    */
-  constructor(code, name, iconUrl) {
+  constructor(code, name, iconPath) {
 
     /**
      * Transit Division Code
@@ -33,10 +33,10 @@ class TransitDivision {
     this.name = name;
 
     /**
-     * Transit Division Icon URL
+     * Transit Division Icon File Path
      * @type {string}
      */
-    this.iconUrl = iconUrl;
+    this.iconPath = iconPath;
 
     /**
      * List of Transit Lines for this Division
@@ -44,14 +44,6 @@ class TransitDivision {
      */
     this.lines = [];
 
-  }
-
-  /**
-   * Add a Transit Line to this Division
-   * @param {TransitLine} line Transit Line to add
-   */
-  addLine(line) {
-    this.lines.push(line);
   }
 
   /**
@@ -67,3 +59,6 @@ class TransitDivision {
   }
 
 }
+
+
+module.exports = TransitDivision;

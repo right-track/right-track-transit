@@ -42,3 +42,6 @@ class TransitEvent {
   }
 
 }
+
+
+module.exports = TransitEvent;

@@ -13,8 +13,10 @@ class RightTrackTransitAgency {
    * Create a new Transit Agency
    * @param {string} id Transit Agency ID
    * @param {string} name Transit Agency Name
+   * @param {string} description Transit Agency Description
+   * @param {string} [iconPath] Local file path to Transit Agency Icon
    */
-  constructor(id, name) {
+  constructor(id, name, description, iconPath) {
 
     /**
      * Transit Agency ID Code
@@ -27,6 +29,18 @@ class RightTrackTransitAgency {
      * @type {string}
      */
     this.name = name;
+
+    /**
+     * Transit Agency Description
+     * @type {string}
+     */
+    this.description = description;
+
+    /**
+     * Local file path to Transit Agency Icon
+     * @type {string}
+     */
+    this.iconPath = iconPath;
 
   }
 
@@ -45,3 +59,5 @@ class RightTrackTransitAgency {
   }
   
 }
+
+module.exports = RightTrackTransitAgency;
