@@ -43,3 +43,16 @@ See the Documentation for more information on the structure of a `TransitFeed`.
 
 
 ### Example
+
+The following example uses the [right-track-transit-mta](https://github.com/right-track/right-track-transit-mta)
+module to build a **Transit Feed** for the Metropolitan Transportation Authority.
+
+```javascript
+const mta = require('right-track-transit-mta');
+
+mta.loadFeed(function(err, feed) {
+  if ( !err ) {
+    console.log(JSON.stringify(feed, null, 2));
+  }
+});
+```
