@@ -15,8 +15,12 @@ class RightTrackTransitAgency {
    * @param {string} name Transit Agency Name
    * @param {string} description Transit Agency Description
    * @param {string} [iconPath] Local file path to Transit Agency Icon
+   * @param {Object} [maintainer] Transit Agency Maintainer Information
+   * @param {string} [maintainer.name] Maintainer Name
+   * @param {string} [maintainer.email] Maintainer Email Address
+   * @param {string} [maintainer.source] Maintainer's project source address
    */
-  constructor(id, name, description, iconPath) {
+  constructor(id, name, description, iconPath, maintainer) {
 
     /**
      * Transit Agency ID Code
@@ -41,6 +45,15 @@ class RightTrackTransitAgency {
      * @type {string}
      */
     this.iconPath = iconPath;
+
+    /**
+     * Transit Agency Maintainer Information
+     * @type {object}
+     * @property {string} name Maintainer Name
+     * @property {string} email Maintainer Email Address
+     * @property {string} source Maintainer's project source address
+     */
+    this.maintainer = maintainer;
 
   }
 
