@@ -93,7 +93,7 @@ class RightTrackTransitAgency {
 
   /**
    * Get the text color for the specified Transit Line
-   * @param line
+   * @param {string} line Transit Line Code
    * @returns {string} text color (#rrggbb)
    * @abstract
    */
